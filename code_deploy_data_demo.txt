@@ -1,0 +1,14 @@
+#!/bin/bash
+sudo su
+sudo apt -y upgrade
+sudo apt -y update
+sudo apt-get install -y ruby
+sudo apt-get install -y wget
+cd /home/ubuntu
+wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
+sudo chmod +x ./install
+sudo ./install auto
+cat <<EOF >/home/ubuntu/Test-Installation
+"Successfully Installed all data!"
+"Proceed Further.."
+EOF
